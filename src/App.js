@@ -3,32 +3,35 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+
+function LandingPage() {
   return (
     <div className="App landing-bg">
-      <nav className="landing-nav">
-        <div className="nav-logo">
-          <img src={logo} alt="VirtualPay Logo" className="logo-img" />
-          <span className="nav-title">VirtualPay</span>
+      <nav className="navbar">
+        <div className="navbar-logo" tabIndex={0} role="button">
+          <img src={logo} alt="VirtualPay Logo" />
+          <span>Virtual<span className="accent">Pay</span></span>
         </div>
-        <ul className="nav-links">
-          <li><a href="#company">Our Company</a></li>
-          <li><a href="#payments">Payments</a></li>
-          <li><a href="#merchants">Merchants</a></li>
-          <li><a href="#resources">Resources</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+        <ul className="navbar-links">
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="#analytics">Analytics</a></li>
+          <li><a href="#departments">Departments</a></li>
+          <li><a href="#settings">Settings</a></li>
         </ul>
-        <button className="login-btn">Login</button>
+        <div className="navbar-actions">
+          <button className="navbar-btn secondary">Log In</button>
+          <button className="navbar-btn primary">Get Started</button>
+        </div>
       </nav>
       <main className="landing-main">
         <h1 className="landing-title">Welcome to VirtualPay Feedback System</h1>
         <p className="landing-desc">
           Empowering open, secure, and data-driven organizational dialogue.
         </p>
-        <button className="get-started-btn">Get Started</button>
       </main>
     </div>
   );
 }
 
-export default App;
+export default LandingPage;

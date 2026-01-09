@@ -25,7 +25,7 @@ function LandingPage() {
         </div>
       </nav>
       <main className="landing-main">
-        <h1 className="landing-title">Welcome to VirtualPay Feedback System</h1>
+        <h1 className="landing-title"></h1>
         <p className="landing-desc">
           Empowering open, secure, and data-driven organizational dialogue.
         </p>

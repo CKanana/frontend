@@ -49,15 +49,13 @@ const HeroSection = ({ loaded }) => {
       <div className="hero-content">
         <div className={`hero-text-wrapper bounce-in${loaded ? ' show' : ''}`} style={{ position: 'relative', zIndex: 100, color: '#222' }}>
           <h1 className="hero-headline" style={{ color: '#7D1F4B' }}>
-            The Future of<br />
-            <span className="text-gradient">Organizational Dialogue</span>
+           Welcome to <br />
+            <span className="text-gradient">VirtualPay Feedback System </span>
           </h1>
           <p className="hero-subheadline" style={{ color: '#F7941E' }}>
             A secure, role-based platform for structured feedback. Transform anonymous insights into data-driven decisions.
           </p>
-          <div className="hero-actions">
-            <button className="btn-hero-primary">Get Started</button>
-          </div>
+
         </div>
       </div>
     </section>

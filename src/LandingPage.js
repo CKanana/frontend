@@ -2,17 +2,18 @@ import React, { useState } from 'react';
 import './App.css';
 import HeroSection from './HeroSection';
 import FeaturesSection from './FeaturesSection';
+import Authentication from './Authentication';
+
 
 function LandingPage() {
   const [bgLoaded, setBgLoaded] = useState(false);
-
-  // Use the image from the public folder
   const bgUrl = process.env.PUBLIC_URL + '/lucid.jpg';
+  const orbUrl = process.env.PUBLIC_URL + '/orb.png';
+  const logUrl = process.env.PUBLIC_URL + '/vp-pic.png';
   return (
     <div className="App landing-bg" style={{ position: 'relative', minHeight: '100vh' }}>
       <div className="landing-bg-img-wrapper">
-        <img
-          src={bgUrl}
+        <img src={bgUrl}
           alt="background"
           className="landing-bg-img"
           onLoad={() => setBgLoaded(true)}
@@ -21,7 +22,7 @@ function LandingPage() {
             top: 0,
             right: 0,
             width: '60vw',
-            height: '100vh',
+            height: '120vh',
             objectFit: 'cover',
             zIndex: 0,
             opacity: 0.98,
@@ -29,11 +30,10 @@ function LandingPage() {
           }}
         />
       </div>
-      {/* Example 3D element on the left side (replace with your actual 3D component if needed) */}
+
       <div style={{ position: 'absolute', top: 0, left: 0, width: '40vw', height: '100vh', zIndex: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
-        {/* Place your 3D element/component here */}
       </div>
-      {/* Optional overlay for readability */}
+    
       <div style={{
         position: 'fixed',
         top: 0,
@@ -46,32 +46,42 @@ function LandingPage() {
       }} />
       <nav className="navbar glass-navbar">
         <div className="navbar-logo" tabIndex={0} role="button">
-            <span className="arc"></span>
-            <span className="virtual">virtual</span><span className="pay">pay</span>
+          <img 
+          src={logUrl} 
+          alt="VirtualPay Logo" 
+          style={{ width: '220px', height: '150px' }} />
+            
         </div>
         <ul className="navbar-links">
           <li><a href="#company">Our Company</a></li>
-          <li><a href="#payments">Payments</a></li>
-          <li><a href="#merchants">Merchants</a></li>
-          <li><a href="#resources">Resources</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+          
         </ul>
         <div className="navbar-actions">
           <button className="navbar-btn secondary">Log In</button>
           <button className="navbar-btn primary">Get Started</button>
-        </div>
+        </div>   
       </nav>
       <div style={{ position: 'relative', zIndex: 20, pointerEvents: 'auto' }}>
         <HeroSection loaded={bgLoaded} />
       </div>
       <FeaturesSection />
       <section className="cta-section">
-        <div className="cta-card">
-          <h2 className="cta-title">Ready to Transform Your Organization?</h2>
-          <p className="cta-caption">Empower every voice, unlock honest insights, and drive real change with secure, anonymous feedback. Your journey to a thriving workplace starts here.</p>
-          <button className="cta-btn">Get Started</button>
+        <div className="cta-row">
+          <div className="cta-content">
+            <h2 className="cta-title">Ready to Transform Your Organization?</h2>
+            <p className="cta-caption">Empower every voice, unlock honest insights, and drive real change with secure, anonymous feedback. Your journey to a thriving workplace starts here.</p>
+            <button className="cta-btn">Get Started</button>
+          </div>
+          <img
+            src={orbUrl}
+            alt="Decorative Orb"
+            className="cta-orb"
+          />
         </div>
       </section>
+      <footer className="footer-glassy">
+        <span>© 2026, Virtual Pay Mauritius. Co. Reg.</span>
+      </footer>
     </div>
   );
 }

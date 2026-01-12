@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import './App.css';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './App.css';
 import HeroSection from './HeroSection';
 import FeaturesSection from './FeaturesSection';
@@ -6,10 +8,12 @@ import Authentication from './Authentication';
 
 
 function LandingPage() {
-  const [bgLoaded, setBgLoaded] = useState(false);
+  const [bgLoaded, setBgLoaded] = React.useState(false);
   const bgUrl = process.env.PUBLIC_URL + '/lucid.jpg';
   const orbUrl = process.env.PUBLIC_URL + '/orb.png';
   const logUrl = process.env.PUBLIC_URL + '/vp-pic.png';
+  const navigate = useNavigate();
+  const goToAuth = () => navigate('/auth');
   return (
     <div className="App landing-bg" style={{ position: 'relative', minHeight: '100vh' }}>
       <div className="landing-bg-img-wrapper">
@@ -50,15 +54,13 @@ function LandingPage() {
           src={logUrl} 
           alt="VirtualPay Logo" 
           style={{ width: '220px', height: '150px' }} />
-            
         </div>
         <ul className="navbar-links">
           <li><a href="#company">Our Company</a></li>
-          
         </ul>
         <div className="navbar-actions">
-          <button className="navbar-btn secondary">Log In</button>
-          <button className="navbar-btn primary">Get Started</button>
+          <button className="navbar-btn secondary" onClick={goToAuth}>Log In</button>
+          <button className="navbar-btn primary" onClick={goToAuth}>Get Started</button>
         </div>   
       </nav>
       <div style={{ position: 'relative', zIndex: 20, pointerEvents: 'auto' }}>
@@ -70,7 +72,7 @@ function LandingPage() {
           <div className="cta-content">
             <h2 className="cta-title">Ready to Transform Your Organization?</h2>
             <p className="cta-caption">Empower every voice, unlock honest insights, and drive real change with secure, anonymous feedback. Your journey to a thriving workplace starts here.</p>
-            <button className="cta-btn">Get Started</button>
+            <button className="cta-btn" onClick={goToAuth}>Get Started</button>
           </div>
           <img
             src={orbUrl}

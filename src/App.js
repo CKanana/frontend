@@ -1,7 +1,7 @@
 
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import logo from './logo.svg';
+import { Link } from 'react-router-dom';
 
 
 function LandingPage() {
@@ -20,12 +20,14 @@ function LandingPage() {
           <li><a href="#settings">Settings</a></li>
         </ul>
         <div className="navbar-actions">
-          <button className="navbar-btn secondary">Log In</button>
+          <Link to="/auth">
+            <button className="navbar-btn secondary">Log In</button>
+          </Link>
           <button className="navbar-btn primary">Get Started</button>
         </div>
       </nav>
       <main className="landing-main">
-        <h1 className="landing-title"></h1>
+        <h1 className="landing-title" id="main-title">Welcome to VirtualPay</h1>
         <p className="landing-desc">
           Empowering open, secure, and data-driven organizational dialogue.
         </p>

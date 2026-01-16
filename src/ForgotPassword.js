@@ -13,6 +13,7 @@ const ForgotPassword = () => {
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
+      console.log(`[Dev Mode] Password Reset Link: http://localhost:3000/reset-password?email=${encodeURIComponent(email)}`);
     }, 1400);
   };
 

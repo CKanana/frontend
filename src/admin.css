@@ -273,3 +273,19 @@
 	text-align: center;
 	margin-top: 1.5rem;
 }
+
+@media print {
+	.sidebar-nav, button {
+		display: none !important;
+	}
+	.admin-dashboard {
+		background: #fff !important;
+		display: block !important;
+	}
+	.admin-dashboard > div {
+		margin-left: 0 !important;
+	}
+	.admin-main-content {
+		padding: 0 !important;
+	}
+}

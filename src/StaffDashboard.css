@@ -1,3 +1,253 @@
+.dashboard-content.with-sidebar {
+  margin-left: 180px;
+  padding: 0.5rem 2rem 2rem 2rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.staff-profile-overview {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+}
+.staff-profile-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #B24592;
+  box-shadow: 0 2px 12px 0 rgba(178, 69, 146, 0.13);
+}
+.staff-profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.staff-profile-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #B24592;
+}
+.staff-profile-role {
+  font-size: 1.05rem;
+  color: #888;
+}
+.staff-profile-email {
+  font-size: 0.98rem;
+  color: #7D1F4B;
+}
+.staff-overview-cards {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+}
+.staff-overview-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(178, 69, 146, 0.13);
+  padding: 2rem 2.5rem;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.staff-overview-card h3 {
+  color: #7D1F4B;
+  margin-bottom: 0.7rem;
+}
+.staff-overview-card-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #B24592;
+  margin-bottom: 0.3rem;
+}
+.staff-overview-card-label {
+  color: #888;
+  font-size: 1.05rem;
+}
+.survey-form-outline, .poll-form-outline {
+  border: 2.5px solid #B24592;
+  box-shadow: 0 2px 12px 0 rgba(178, 69, 146, 0.08);
+}
+.survey-title {
+  font-weight: 700;
+  font-size: 1.12rem;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+.survey-description {
+  font-size: 0.98rem;
+  color: #7D1F4B;
+  margin-bottom: 0.7rem;
+}
+.survey-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-size: 0.92rem;
+  color: #888;
+  margin-bottom: 1.1rem;
+}
+.survey-from span {
+  color: #B24592;
+  font-weight: 600;
+}
+.survey-deadline span {
+  color: #F7941E;
+  font-weight: 600;
+}
+.survey-start-btn {
+  background: linear-gradient(90deg, #7D1F4B 0%, #B24592 100%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.98rem;
+  font-weight: 600;
+  align-self: flex-end;
+  transition: background 0.18s;
+}
+.survey-start-btn:hover {
+  background: linear-gradient(90deg, #F7941E 0%, #FFB347 100%);
+  color: #fff;
+}
+.action-required-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.2rem;
+  min-height: 180px;
+}
+.bg-f8f9fa {
+  background-color: #f8f9fa;
+}
+.sidebar-nav-menu {
+  margin-top: 1rem;
+}
+.sidebar-nav-list {
+  list-style: none;
+  padding: 0;
+}
+.sidebar-nav-item {
+  color: #fff;
+  cursor: pointer;
+  padding: 12px 15px;
+  font-weight: 500;
+  background: transparent;
+  border-left: 4px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  transition: color 0.38s cubic-bezier(0.4,0,0.2,1), background 0.38s cubic-bezier(0.4,0,0.2,1), border-left 0.38s cubic-bezier(0.4,0,0.2,1), box-shadow 0.38s cubic-bezier(0.4,0,0.2,1), transform 0.38s cubic-bezier(0.4,0,0.2,1);
+}
+.sidebar-nav-item.overview.active,
+.sidebar-nav-item.surveys.active,
+.sidebar-nav-item.polls.active,
+.sidebar-nav-item.history.active,
+.sidebar-nav-item.profile.active {
+  color: #F7941E;
+  font-weight: 700;
+  background: #fff0f7;
+  border-left: 4px solid #F7941E;
+  box-shadow: 0 2px 12px rgba(247,148,30,0.10);
+  transform: scale(1.04);
+}
+.sidebar-nav-item.logout {
+  cursor: pointer;
+  color: #fff;
+}
+.has-badge {
+  position: relative;
+}
+.nav-badge {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: #F7941E;
+  color: #fff;
+  border-radius: 50%;
+  min-width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(247,148,30,0.13);
+}
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
+.welcome-title {
+  color: #7D1F4B;
+  margin-bottom: 0.5rem;
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+.summary-text {
+  color: #B24592;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.highlight {
+  color: #F7941E;
+  font-weight: bold;
+}
+.dashboard-cards-row {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.dashboard-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 320px;
+  min-height: 110px;
+  flex: 1;
+  padding: 2rem 2.5rem;
+}
+.dashboard-card-title {
+  color: #B24592;
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.dashboard-card-value {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #7D1F4B;
+  letter-spacing: 1px;
+}
+.dashboard-card.pending-surveys {
+  border-left: 7px solid #F7941E;
+}
+.dashboard-card.polls-voted {
+  border-left: 7px solid #B24592;
+}
+/* Action Required Card Custom Style */
+.action-required-card {
+  transition: box-shadow 0.28s cubic-bezier(0.4,0,0.2,1), transform 0.28s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 4px 20px rgba(247,148,30,0.10);
+}
+.action-required-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(247,148,30,0.25), 0 2px 8px 0 rgba(247,148,30,0.10);
+  transform: scale(1.045);
+  z-index: 2;
+}
 /* Hamburger menu styles */
 .hamburger-menu {
   display: none;
@@ -69,7 +319,7 @@
   from { transform: translateX(-100%); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
 }
-/* Responsive: Hide sidebar and show hamburger or bottom nav on small screens */
+
 @media (max-width: 900px) {
   .sidebar-nav {
     display: none;
@@ -361,7 +611,7 @@
   background: #fff;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #333;
+  color: #fff;
   position: relative;
 }
 
@@ -447,15 +697,13 @@
   color: #7D1F4B;
 }
 
-/* Content Area */
+
 .dashboard-content {
   padding: 1rem 2rem;
   max-width: 800px;
-  /* No margin auto here if you want it strictly left aligned, 
-     but usually dashboards look better with some constraint */
 }
 
-/* Welcome Section */
+
 .welcome-section {
   margin-bottom: 2.5rem;
   margin-top: 0.5rem;

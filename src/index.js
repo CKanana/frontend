@@ -9,8 +9,6 @@ import StaffDashboard from './StaffDashboard';
 import Profile from './Profile';
 import AdminDashboard from './admin';
 import AdminProfile from './AdminProfile';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -30,7 +28,5 @@ root.render(
 );
 
 
-serviceWorkerRegistration.unregister();
 
 
-reportWebVitals();
